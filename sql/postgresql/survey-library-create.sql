@@ -27,6 +27,7 @@ create table survey_library (
 create index survey_library_object_id_idx on survey_library(object_id);
 create index survey_library_orig_object_id_idx on survey_library(original_object_id);
 
+-- question proxy is to give us an object to attach category trees to
 create table survey_library_default_objects (
         survey_id       integer
                         constraint survey_do_survey_id_fk
@@ -34,6 +35,7 @@ create table survey_library_default_objects (
         section_id      integer
                         constraint survey_do_section_id_fk
                         references survey_sections,
+        question_proxy  integer,
         package_id      integer
                         constraint survey_do_package_id_fk
                         references apm_packages

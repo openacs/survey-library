@@ -1,0 +1,11 @@
+# 
+#
+# Serve up survey package pages under survey-library to add and edit items
+#
+# @author Dave Bauer (dave@thedesignexperience.org)
+# @creation-date 2004-09-19
+# @arch-tag: 35a5ad30-8b91-4a5b-b2a5-90257366bf4e
+# @cvs-id $Id$
+
+set page [ad_conn path_info]
+rp_internal_redirect /packages/survey-builder-ui/www/admin/${page}

@@ -1,0 +1,21 @@
+# 
+#
+# Dispatch to view survey
+#
+# @author Dave Bauer (dave@thedesignexperience.org)
+# @creation-date 2004-09-18
+# @arch-tag: fcd8e016-e3c9-4232-8606-b8af7600abd5
+# @cvs-id $Id$
+
+ad_page_contract {
+
+} {
+	object_id:integer,optional
+}
+
+if {[info exists object_id] && $object_id ne ""} {
+    rp_form_put survey_id $object_id
+}
+set page [ad_conn path_info]
+
+rp_internal_redirect /packages/survey/www/admin/${page}

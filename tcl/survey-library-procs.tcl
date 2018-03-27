@@ -113,7 +113,7 @@ DB object_type = '${object_type}'
 DB package_id = '${orig_package_id}'
 DB --------------------------------------------------------------------------------"
 
-# get the community_id (argh! .LRN specific code, why could'nt it use
+# get the community_id (argh! .LRN specific code, why couldn't it use
 # subsites?)
 
 
